@@ -34,7 +34,7 @@ prepare() {
 build() {
   cd $pkgname-$pkgver
   export CXXFLAGS="$CXXFLAGS -DNDEBUG"
-  cmake . -GNinja -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_MERGED_PLUGINS=Off
+  cmake . -GNinja -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_MERGED_PLUGINS=Off -DENABLE_EXTERNAL_PLUGINS=On
   cmake --build build
 }
 
